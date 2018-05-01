@@ -1,15 +1,26 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+		{% include meta.html %}
+		{% include mathjax.html %}
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-<article class="post">
-	<h1>{{ page.title }}</h1>
-	<div class="date">
-		{{ page.date | date: "%Y年%m月%d日" }}
-	</div>
+		<!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+	</head>
 
-	<div class="entry">
-		{{ content }}
-	</div>
+	<body>
+		<div id="main" role="main" class="container">
+			{{ content }}
+		</div>
 
-</article>
+		<div class="wrapper-footer">
+			<div class="container">
+				<footer class="footer">
+					{% include svg-icons.html %}
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
