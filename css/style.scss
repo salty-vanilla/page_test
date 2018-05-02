@@ -302,10 +302,10 @@ tr:nth-child(2n) {
 */
 nav {
   float: left;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 27px; // @TODO: Vertically middle align
   margin-left: 100px;
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 14px;
 
   @include mobile {
     float: none;
