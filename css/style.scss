@@ -108,6 +108,11 @@ ul ul, ol ul {
   list-style-type: circle;
 }
 
+ol li {
+  color: $blue;
+}
+
+
 em, i {
   font-style: italic;
 }
