@@ -11,7 +11,6 @@ permalink: /about/
 
 <details>
 <summary>## 業績</summary>
-<br>
   
 ## 業績
 
@@ -35,5 +34,5 @@ permalink: /about/
 ### 受賞
 * Best Paper Award受賞 Shunsuke Nakatsuka, Kunihito Kato, Yosuke Nakanishi : "Study on Visual Inspection Method using CNN Regression", Asia International Symposium on Mechatronics, D1-5(2017年9月15日受賞)
 * ViEW2017 ビジョン技術の実利用ワークショップ 小田原賞（優秀論文賞）, 中塚俊介, 相澤宏旭, 加藤邦人 : "少数不良品サンプル下におけるAdversarial AutoEncoderによる正常モデルの生成と不良判別", ビジョン技術の実利用ワークショップ ViEW2017, pp.148-149 (2017年12月8日 受賞)
-<br>
+
 </details>
