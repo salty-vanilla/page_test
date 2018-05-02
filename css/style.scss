@@ -132,8 +132,8 @@ ol li {
     text-indent: -.7em;
 }
 ol li:before {
-    content: "• ";
-    color: $red;
+    list-style: decimal;
+    color: $blue;
 }
 
 em, i {
