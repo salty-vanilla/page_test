@@ -10,7 +10,7 @@ permalink: /about/
 研究 : ニューラルネットワーク, コンピュータビジョン, 人工知能を用いた外観検査の自動化
 
 <details>
-<summary>## 業績</summary>
+<summary> `## 業績` </summary>
   
 ## 業績
 
