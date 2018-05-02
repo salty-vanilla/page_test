@@ -134,7 +134,7 @@ ol li {
 }
 ol li:before {
     counter-increment: number 1;
-    content: counter(number, cjk-ideographic) ".  "; 
+    content: counter(number, decimal) ".  "; 
     color: $blue;
 }
 
