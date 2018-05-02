@@ -113,13 +113,27 @@ ul {
     padding:0;
     margin:0;
 }
-li { 
+ul li { 
     padding-left: 1em; 
     text-indent: -.7em;
 }
-li:before {
+ul li:before {
     content: "• ";
     color: $blue;
+}
+
+ol {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+ol li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+ol li:before {
+    content: "• ";
+    color: $red;
 }
 
 em, i {
