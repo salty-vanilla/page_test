@@ -118,7 +118,7 @@ ul li {
     text-indent: -.7em;
 }
 ul li:before {
-    content: "• ";
+    content: "•  ";
     color: $blue;
 }
 
@@ -126,13 +126,15 @@ ol {
     list-style: none;
     padding:0;
     margin:0;
+    counter-reset: number 0;   
 }
 ol li { 
     padding-left: 1em; 
     text-indent: -.7em;
 }
 ol li:before {
-    content: decimal;
+    counter-increment: number 1;
+    content: counter(number, cjk-ideographic) ".  "; 
     color: $blue;
 }
 
