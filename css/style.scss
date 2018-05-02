@@ -254,6 +254,7 @@ tr:nth-child(2n) {
 
 .site-info {
   float: left;
+  margin: 23px 0 0 0;
 
   @include mobile {
     float: none;
@@ -263,7 +264,7 @@ tr:nth-child(2n) {
 }
 
 .site-name {
-  margin: 5px 0 0 0;
+//   margin: 5px 0 0 0;
   color: $lighterGray;
   cursor: pointer;
   font-family: $helveticaNeue;
