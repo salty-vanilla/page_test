@@ -302,7 +302,7 @@ tr:nth-child(2n) {
 */
 nav {
   float: left;
-  margin-top: 27px; // @TODO: Vertically middle align
+  margin-top: 32px; // @TODO: Vertically middle align
   margin-left: 100px;
   font-family: $helveticaNeue;
   font-size: 14px;
@@ -315,7 +315,7 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 30px;
     color: $lightGray;
     text-align: right;
     font-weight: 300;
