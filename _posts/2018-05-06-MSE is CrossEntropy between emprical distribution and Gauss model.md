@@ -29,3 +29,6 @@ $$\begin{eqnarray}
 &=& -\frac{1}{N}\sum_{i=1}^{N}log[\frac{1}{\sqrt{2\pi\sigma^2}}]-\frac{(x-p(x))^2}{2\sigma^2} \\
 &=& \frac{1}{2N}\sum_{i=1}^{N}\frac{(x-p(x))^2}{\sigma^2}+log[2\pi\sigma^2]
 \end{eqnarray}$$
+
+分散$\sigma^2$は，$p(x)$を求めればわかるので，↑の式は
+$$ -E_{x\sim p_{data}}[log(p_{model}(x)] \propto sum_{i=1}^{N}(x-p(x))^2 $$
