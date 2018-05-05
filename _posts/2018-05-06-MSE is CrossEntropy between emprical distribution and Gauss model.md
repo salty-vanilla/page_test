@@ -8,7 +8,7 @@ $$ MSE(y_{true}, y_{pred}) = \frac{1}{N}\sum_{i=1}^{N}|y_{pred}-y_{true}|_2^2 $$
 
 ## 最尤推定
 最尤推定は経験分布$p_{data}$とモデル分布$p_{model}$のKLDを最小化することとみなせる
-$$ D_{KL}(p_{data}| p_{model}) =  E_{x\sim p_{data}}[log(p_{data}(x)-log(p_{model}(x)]$$
+$$ D_{KL}(p_{data}| p_{model}) =  E_{x\sim p_{data}}[log[p_{data}(x)]-log[p_{model}(x)]]$$
 
 左項はデータの生成過程にあたる．モデルの関数には関わりを持たないため，以下だけ最小化すればよい
 
