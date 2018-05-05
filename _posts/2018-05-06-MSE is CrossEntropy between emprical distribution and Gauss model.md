@@ -22,8 +22,8 @@ $$ N(x;p(x),\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-p(x))^2}{2\si
 ## 「MSEは経験分布とガウスモデル間のクロスエントロピーである」
 $P_{model} = N(x;p(x),\sigma^2)$とすると
 $$\begin{eqnarray}
- -E_{x\sim p_{data}}[log(p_{model}(x)]
- = -\frac{1}{N}\sum_{i=1}^{N}log[\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-p(x))^2}{2\sigma^2})] \\
- = -\frac{1}{N}\sum_{i=1}^{N}log[\frac{1}{\sqrt{2\pi\sigma^2}}]-\frac{(x-p(x))^2}{2\sigma^2} \\
- = \frac{1}{2N}\sum_{i=1}^{N}\frac{(x-p(x))^2}{2\sigma^2}+log[2\pi\sigma^2]
- \end{eqnarray}$$
+-E_{x\sim p_{data}}[log(p_{model}(x)]
+&=& -\frac{1}{N}\sum_{i=1}^{N}log[\frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-p(x))^2}{2\sigma^2})] \\
+&=& -\frac{1}{N}\sum_{i=1}^{N}log[\frac{1}{\sqrt{2\pi\sigma^2}}]-\frac{(x-p(x))^2}{2\sigma^2} \\
+&=& \frac{1}{2N}\sum_{i=1}^{N}\frac{(x-p(x))^2}{\sigma^2}+log[2\pi\sigma^2]
+\end{eqnarray}$$
