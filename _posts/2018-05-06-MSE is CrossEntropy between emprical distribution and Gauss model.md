@@ -9,13 +9,15 @@ $$ MSE(y_{true}, y_{pred}) = \frac{1}{N}\sum_{i=1}^{N}|y_{pred}-y_{true}|_2^2 $$
 ## 最尤推定
 最尤推定は経験分布$p_{data}$とモデル分布$p_{model}$のKLDを最小化することとみなせる
 $$ D_{KL}(p_{data}| p_{model}) =  E_{x\sim p_{data}}[log(p_{data}(x)-log(p_{model}(x)]$$
+
 左項はデータの生成過程にあたる．モデルの関数には関わりを持たないため，以下だけ最小化すればよい
+
 $$ -E_{x\sim p_{data}}[log(p_{model}(x)]$$
 
 ## ガウスモデル
 ガウスモデルでは，2つのパラメータを持つ
 * 平均$p(x)$
-* 分散$\sigma^2 =\sum_{i=1}^{N}|x_i-p(x_i)|_2^2$
+* 分散$\sigma^2 =\sum_{i=1}^{N}(x_i-p(x_i))^2$
 
 $$ N(x;p(x),\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}exp(-\frac{(x-p(x))^2}{2\sigma^2}) $$
 
