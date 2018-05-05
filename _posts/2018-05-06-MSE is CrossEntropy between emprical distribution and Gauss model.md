@@ -31,4 +31,7 @@ $$\begin{eqnarray}
 \end{eqnarray}$$
 
 分散$\sigma^2$は，$p(x)$を求めればわかるので，↑の式は
+
 $$ -E_{x\sim p_{data}}[log(p_{model}(x)] \propto sum_{i=1}^{N}(x-p(x))^2 $$
+
+となる．これはMSEのN倍に等しい．
