@@ -49,26 +49,3 @@ $$ \bold{g_{all}} = \{ \bold{g_{1}}, \bold{g_{2}}, ..., \bold{g_{S}}\} $$
 $$ Output = W_{FC2} \cdot{\bold{g_{all}}} $$  
   
 <img src="{{ site.baseurl }}/images/post/2018-05-06-Learn to Pay Attention/fig1.png" />
-
-
-$$ C^s(\mathbf{\hat{L_s}}, \bold{g}) = \{c_1^s, c_2^s, ..., c_n^s\} $$  
-
-$$ c_i^s =  \hat{l^s_i} \cdot{g} $$  
-
-$C^s(\mathbf{\hat{L_s}}, \bold{g})$のshapeは，$(BS, N)$  
-Compatibility scoresをSoftmaxで正規化する  
-
-$$ a_i^s =  \frac{exp(c_i^s)}{\sum_j^N exp(c_j^s)} $$  
-
-各Moduleの出力$\mathbf{g^s}$は  
-
-$$ \bold{g^s} = \sum_i^n a_i^s \cdot{\mathbf{l_i^s}} $$  
-
-最終的には，全Moduleの出力を連結することでModule全体の出力として，最後にFC層  
-
-$$ \mathbf{g_{all}} = \{ \mathbf{g_{1}}, \mathbf{g_{2}}, ..., \mathbf{g_{S}}\} $$  
-
-$$ Output = W_{FC2} \cdot{\mathbf{g_{all}}} $$  
-  
-<img src="{{ site.baseurl }}/images/post/2018-05-06-Learn to Pay Attention/fig1.png" />
-
