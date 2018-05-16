@@ -34,7 +34,7 @@ reluは非線形関数であるが，$ x > 0 $においては線形であるた�
 そのため，上の節で述べたような摂動に対して脆弱であるといえる．  
 tanhやsigmoidなどの非線形関数を活性化として適用することで，これは緩和されるかもしれないが，勾配消失問題が起きてしまうためDNNの活性化関数として，それらを使うことは望ましくない．
 
-<img src="{{ site.baseurl }}/images/post/2018-05-16-Explaining and Harnessing Adversarial Examples/act.png">
+<center><img src="{{ site.baseurl }}/images/post/2018-05-16-Explaining and Harnessing Adversarial Examples/act.png"></center>
 
 ## Adversarial Training
 GoodfellowらはLossに正則化項を加える手法を提案している．  
