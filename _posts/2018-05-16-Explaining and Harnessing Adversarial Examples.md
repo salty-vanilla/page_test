@@ -42,7 +42,7 @@ GoodfellowらはLossに正則化項を加える手法を提案している．
 
 $$ \hat{J}(\theta, x, y) = \alpha J(\theta, x, y) + (1 - \alpha)J(\theta, \hat{x}, y) $$
 
-$$ \hat{x} = x + \eta $$
+$$ \hat{x} = x + \eta = x + \epsilon sign(\nabla_xJ(\theta, x, y)) $$
 
 論文内では，$\alpha = 0.5 $で固定した．  
 MNISTにおいて，汎化性能の向上を確認．
