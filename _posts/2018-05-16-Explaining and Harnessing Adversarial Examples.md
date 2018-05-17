@@ -11,6 +11,16 @@ title: Explaining and Harnessing Adversarial Examples
 * 摂動に対して，ロバストにするように正則化項をLossに加えることで汎化性能を向上させることが可能(Adversarial Training)
 <img src="{{ site.baseurl }}/images/post/2018-05-16-Explaining and Harnessing Adversarial Examples/fig.png">
 
+## 摂動によって識別結果が変わってしまう
+機械学習では本来，
+
+$$ f(x) \simeq f(x + \eta) $$
+
+となるように，学習過程が設計されている．($\eta$は微小なノイズ)  
+しかし，こうならないような摂動$\eta$を生成することが可能である．  
+これが，Adversarial Examplesである．  
+これを改善するのが，Adversarial Trainingである．  
+Adversarial Trainingはデータポイント$x$の周辺において，識別器の出力を滑らかにするような役割を担う．
 
 ## 線形モデルでの説明
 従来研究では，DNNが摂動に弱いのは非線形性と過学習が原因とされていた．  
