@@ -22,7 +22,7 @@ $$ \Delta_{KL}(r, x, \theta) = KL(p(y\mid x, \theta) \| p(y\mid x+r, \theta))$$
 
 $$ LDS(x, \theta) =  - \Delta_{KL}(r_{v-adv}, x, \theta) $$
 
-$r_{v-adv}$は，$\|r\|_2 \leqq \epsilon$ において，$p(y| x, \theta)$を最も変化させるような$r$である．  
+$r_{v-adv}$は，$\|r\|_2 \leqq \epsilon$ において，$p(y\mid x, \theta)$を最も変化させるような$r$である．  
 
 $$ r_{v-adv} = \argmax_r \{ \Delta_{KL}(r_{v}, x, \theta \| \|r\|_2 \leqq \epsilon \} $$
 
@@ -53,12 +53,12 @@ $$ \frac{1}{2}r^TH(x, \theta)r $$
 <img src='images/pi.png'>
 
 簡単にまとめると以下の3ステップ
-1. ランダムな単位ベクトル $\bold{d}$を初期化
-2. $Ip$回，以下の式で$\bold{d}$を更新
+* ランダムな単位ベクトル $\bold{d}$を初期化
+* $Ip$回，以下の式で$\bold{d}$を更新
 
 $$ \nabla_r\Delta_{KL}(r=\xi d, x, \theta) $$
 
-3. 最終に求まった$d$を使って，
+* 最終に求まった$d$を使って，
 
 $$ r_{v-adv} = \epsilon d$$
 
@@ -69,5 +69,5 @@ $$ r_{v-adv} = \epsilon d$$
 $$ -\frac{\delta}{\delta \theta}KL(p(y\mid x, \hat{\theta}) \| p(y\mid x+r_{v-adv}, \theta)) $$
 
 これは，$p(y\mid x, \hat{\theta})$を定数とみなすことで，微分したときの勾配を伝播させないようにしようということ．  
-なぜなら，$\Delta_\theta r_{v-adv}$がパラメータ$\theta$に対して非常に不安定であるため，固定しないと有効な正則化項を得られないから．
+なぜなら，$\Delta_\theta r_{v-adv}$がパラメータ$\theta$に対して非常に不安定であるため，固定しないと有効な正則化項を得られないから．  
 tensorflow では，`tf.stop_gradient`で実装可能
