@@ -66,7 +66,7 @@ $$ r_{v-adv} = \epsilon d$$
 しかし，1点注意が必要である．
 論文内の式12に記述があるように
 
-$$ -\frac{\delta}{\delta \theta}KL(p(y\mid x, \hat{\theta}) \| p(y\mid x+r_{v-adv}, \theta)) $$
+$$ -\frac{\partial}{\partial \theta}KL(p(y\mid x, \hat{\theta}) \| p(y\mid x+r_{v-adv}, \theta)) $$
 
 これは，$p(y\mid x, \hat{\theta})$を定数とみなすことで，微分したときの勾配を伝播させないようにしようということ．  
 なぜなら，$\Delta_\theta r_{v-adv}$がパラメータ$\theta$に対して非常に不安定であるため，固定しないと有効な正則化項を得られないから．  
