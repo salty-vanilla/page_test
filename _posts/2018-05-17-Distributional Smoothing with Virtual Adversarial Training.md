@@ -34,7 +34,21 @@ $$ \frac{1}{N}\sum_{n=1}^N \log p(y_n \mid x_n, \theta ) + \lambda \frac{1}{N}\s
 
 ## $r_{v-adv}$の算出
 本当は，$r_{v-adv}$の算出には，$ \Delta_{KL}(r, x, \theta) $ のHessianを計算する必要がある．  
-これは計算的にしんどいので，PowerIterationによって近似計算する．  
+その理由を以下に示す．  
+$\Delta_{KL}(r, x, \theta)$ を $\|r\|_2 \leqq \epsilon$ の条件において最大にするような$r$を求めたい．  
+$r=0$ まわりでテイラー展開すると，  
+
+$$\begin{eqnarray} \Delta_{KL}(r, x, \theta) &\simeq& \Delta_{KL}(r=0, x, \theta) + r^T\nabla_r\Delta_{KL}(r=0, x, \theta) + \frac{1}{2}r^T\nabla\nabla_r\Delta_{KL}(r=0, x, \theta)r \\
+ &=& \Delta_{KL}(r=0, x, \theta) + r^T\nabla_r\Delta_{KL}(r=0, x, \theta) + \frac{1}{2}r^TH(x, \theta)r \end{eqnarray}$$
+
+KLDの定義から，$r=0$のときには2つの分布は等しくなる．また，必ず正の値となるため，$r=0$のおいて，最小値を取り，$r=0$において勾配は0となる．  
+
+そのため，最大化したいのは
+
+$$ \frac{1}{2}r^TH(x, \theta)r $$
+
+上式は二次形式 (quadratic form)であるため，これを最大化するためには$r$を$H(x, \theta)$の最大固有値の固有ベクトルにすればよい．  
+固有値分解は計算的にしんどいので，PowerIterationによって近似計算する．  
 この算出アルゴリズムは以下  
 <img src='images/pi.png'>
 
@@ -42,4 +56,18 @@ $$ \frac{1}{N}\sum_{n=1}^N \log p(y_n \mid x_n, \theta ) + \lambda \frac{1}{N}\s
 1. ランダムな単位ベクトル $\bold{d}$を初期化
 2. $Ip$回，以下の式で$\bold{d}$を更新
 
-$$ $$
+$$ \nabla_r\Delta_{KL}(r=\xi d, x, \theta) $$
+
+3. 最終に求まった$d$を使って，
+
+$$ r_{v-adv} = \epsilon d$$
+
+これにより，正則化項を求めることができる．  
+しかし，1点注意が必要である．
+論文内の式12に記述があるように
+
+$$ -\frac{\delta}{\delta \theta}KL(p(y\mid x, \hat{\theta}) \| p(y\mid x+r_{v-adv}, \theta)) $$
+
+これは，$p(y\mid x, \hat{\theta})$を定数とみなすことで，微分したときの勾配を伝播させないようにしようということ．  
+なぜなら，$\Delta_\theta r_{v-adv}$がパラメータ$\theta$に対して非常に不安定であるため，固定しないと有効な正則化項を得られないから．
+tensorflow では，`tf.stop_gradient`で実装可能
