@@ -39,7 +39,7 @@ $\Delta_{KL}(r, x, \theta)$ を $\|r\|_2 \leqq \epsilon$ の条件において�
 $r=0$ まわりでテイラー展開すると，  
 
 $$\begin{eqnarray} \Delta_{KL}(r, x, \theta) &\simeq& \Delta_{KL}(r=0, x, \theta) + r^T\nabla_r\Delta_{KL}(r=0, x, \theta) + \frac{1}{2}r^T\nabla\nabla_r\Delta_{KL}(r=0, x, \theta)r \nonumber \\
- &=& \Delta_{KL}(r=0, x, \theta) + r^T\nabla_r\Delta_{KL}(r=0, x, \theta) + \frac{1}{2}r^TH(x, \theta)r \end{eqnarray} \nonumber $$
+ &=& \Delta_{KL}(r=0, x, \theta) + r^T\nabla_r\Delta_{KL}(r=0, x, \theta) + \frac{1}{2}r^TH(x, \theta)r \nonumber \end{eqnarray}$$
 
 KLDの定義から，$r=0$のときには2つの分布は等しくなる．また，必ず正の値となるため，$r=0$のおいて，最小値を取り，$r=0$において勾配は0となる．  
 
