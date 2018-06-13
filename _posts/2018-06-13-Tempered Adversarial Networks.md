@@ -36,7 +36,9 @@ $$ L_L=\lambda L^A_L+L^R_L $$
 レンズは再構成とGANの元々のObjectiveのバランスを自動的に取らせている．  
 パラメータ$\lambda$は，学習が進むにつれて減少するように設計している．  
 
-$$ \begin{empheq}[left={|\lambda|=\empheqlbrace}]{alignat=2}
-1-sin(\frac{t\pi}{2K}) & \quad (t<K) \\
-0 & \quad (otherwise)
-\end{empheq} $$
+$$ f(x) = \left\{
+\begin{array}{ll}
+1 & (x \geq 0)\\
+0 & (x &lt; 0)
+\end{array}
+\right. $$
