@@ -30,3 +30,8 @@ $$ L_L=\lambda L^A_L+L^R_L $$
 
 再構成誤差はLensがすべて0や写像するなどの自明解への収束を防ぐためである．
 レンズは再構成とGANの元々のObjectiveのバランスを自動的に取らせている．
+パラメータ$\lambda$は，学習が進むにつれて減少するように設計している．  
+$$ \begin{empheq}[left={|\lambda|=\empheqlbrace}]{alignat=2}
+1-sin(\frac{t\pi}{2K}) & \quad (t<K) \\
+0 & \quad (otherwise)
+\end{empheq} $$
