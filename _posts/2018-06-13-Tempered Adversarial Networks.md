@@ -21,15 +21,15 @@ $$ \min_G\max_DV(D,G)=E_{x\sim{X}}[log(D(x))]+E_{z\sim{Z}}[1-log(D(G(z)))]$$
 Lens を $x\sim{X}$ をDiscriminatorに入力する直前に適用する．
 <img src>
 
-Lens の最適化には$L^A_L$と$L^R_L$の2つのLossを用いる．
-$L^A_L$は敵対的誤差であり，$L^R_L$は再構成誤差である．
+Lens の最適化には$L^A_L$と$L^R_L$の2つのLossを用いる．  
+$L^A_L$は敵対的誤差であり，$L^R_L$は再構成誤差である．  
 
-$$ L^A_L=-E_{x\sim{X}}[log(D(L(x)))]$$
-$$ L^R_L=E_{x\sim{X}}\|x-L(x)\|^2_2 $$
-$$ L_L=\lambda L^A_L+L^R_L $$
+$$ L^A_L=-E_{x\sim{X}}[log(D(L(x)))]$$  
+$$ L^R_L=E_{x\sim{X}}\|x-L(x)\|^2_2 $$  
+$$ L_L=\lambda L^A_L+L^R_L $$  
 
-再構成誤差はLensがすべて0や写像するなどの自明解への収束を防ぐためである．
-レンズは再構成とGANの元々のObjectiveのバランスを自動的に取らせている．
+再構成誤差はLensがすべて0や写像するなどの自明解への収束を防ぐためである．  
+レンズは再構成とGANの元々のObjectiveのバランスを自動的に取らせている．  
 パラメータ$\lambda$は，学習が進むにつれて減少するように設計している．  
 $$ \begin{empheq}[left={|\lambda|=\empheqlbrace}]{alignat=2}
 1-sin(\frac{t\pi}{2K}) & \quad (t<K) \\
