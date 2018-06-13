@@ -20,7 +20,10 @@ $$ \min_G\max_DV(D,G)=E_{x\sim{X}}[log(D(x))]+E_{z\sim{Z}}[1-log(D(G(z)))]$$
 データ分布$X$は学習中ずっと固定されたままである．それに対して，生成分布は学習中常に変化している．  
 この非対称を解決するためにLens Network ($L$)を用いる．  
 Lens を $x\sim{X}$ をDiscriminatorに入力する直前に適用する．
-<img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/architecture.png" />
+
+<center><img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/architecture.png" /></center>
+
+<center><img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/models.png" /></center>
 
 Lens の最適化には$L^A_L$と$L^R_L$の2つのLossを用いる．
 $L^A_L$は敵対的誤差であり，$L^R_L$は再構成誤差である．
@@ -42,7 +45,7 @@ $$ \lambda = \left\{
 \end{array}
 \right. $$  
 
-<img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/lambda_schedule.png" />
+<center><img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/lambda_schedule.png" /></center>
 
 $\lambda=0$になると，Lensは取り払ってしまう．  
 論文内では$K=10^5$で固定している．  
@@ -54,8 +57,8 @@ Lensは単射（1対1対応の写像）である必要はない．
 この手法では，Lensがその調節すらも学習している．  
 
 
-<img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/res_mnist.png" />
+<center><img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/res_mnist.png" /></center>
 
-<img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/fid_mnist.png" />
+<center><img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/fid_mnist.png" /></center>
 
-<img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/res_celeba.png" />
+<center><img src="{{ site.baseurl }}/images/post/2018-06-13-Tempered Adversarial Networks/res_celeba.png" /></center>
