@@ -22,6 +22,9 @@ permalink: /about/
 * Kyosuke Komoto, Shunsuke Nakatsuka Hiroaki, Aizawa, Kunihito Kato, Hiroyuki Kobayashi, Kazumi Banno : "A Performance Evaluation of Defect Detection by using Denoising AutoEncoder Generative Adversarial Networks", International Workshop on Advanced Image Technology 2018, Session E2-4 (2018.1.9)
 * Shunsuke Nakatsuka, Hiroaki Aizawa and Kunihito Kato : "A Method of Generation of Normal Model and Discrimination of Defects by Adversarial AutoEncoder under Small Number of Defective Samples", Proceeding of 24rd International Workshop on Frontiers of Computer Vision, OS3-1,(2018.2.22)
 
+### 論文誌
+* 中塚俊介，相澤宏旭，加藤邦人："少数不良品サンプル下におけるAdversarial AutoEncoderによる正常モデルの生成と異常検出"，精密工学会誌，投稿中
+
 ### 雑誌
 * 中塚俊介, 相澤宏旭, 加藤邦人 : "少数不良品サンプル下におけるAdversarial AutoEncoderによる正常モデルの生成と不良判別", 映像情報インダストリアル, pp.57-68(2018.03)
 
