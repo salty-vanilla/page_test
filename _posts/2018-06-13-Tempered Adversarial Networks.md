@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tempered Adversarial Networks
+thumbnail: 2018-06-13-Tempered Adversarial Networks/res_celeba.png
 ---
 
 ## TL;DR

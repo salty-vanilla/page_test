@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Learn to Pay Attention
+thumbnail: 2018-05-06-Learn to Pay Attention/fig1.png
 ---
 
 ## TL;DR
@@ -47,5 +48,5 @@ $$ \bold{g^s} = \sum_i^n a_i^s \cdot{\bold{l_i^s}} $$
 $$ \bold{g_{all}} = \{ \bold{g_{1}}, \bold{g_{2}}, ..., \bold{g_{S}}\} $$  
 
 $$ Output = W_{FC2} \cdot{\bold{g_{all}}} $$  
-  
+
 <img src="{{ site.baseurl }}/images/post/2018-05-06-Learn to Pay Attention/fig1.png" />

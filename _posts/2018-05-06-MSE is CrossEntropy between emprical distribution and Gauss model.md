@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MSE is CrossEntropy between emprical distribution and Gauss model
+thumbnail: 2018-05-06-MSE is CrossEntropy between emprical distribution and Gauss model/thumb.png
 ---
 
 ## MSE (Mean Squared Error)

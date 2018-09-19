@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Explaining and Harnessing Adversarial Examples
+thumbnail: 2018-05-16-Explaining and Harnessing Adversarial Examples/fig.png
 ---
 
 ## TL;DR

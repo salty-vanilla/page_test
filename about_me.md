@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: about
 title: About me
 permalink: /about/
 ---
 
-## About me 
+## About me
 名前 : 中塚 俊介  
 所属 : 岐阜大学大学院  
 研究 : ニューラルネットワーク, コンピュータビジョン, 人工知能を用いた外観検査の自動化

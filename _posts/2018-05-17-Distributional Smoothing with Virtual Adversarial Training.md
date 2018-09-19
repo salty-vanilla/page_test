@@ -1,3 +1,9 @@
+---
+layout: post
+title: Distributional Smoothing with Virtual Adversarial Training
+thumbnail: 2018-05-17-Distributional Smoothing with Virtual Adversarial Training/fig.png
+---
+
 ## TL;DR
 * 出力分布を滑らかにすることが目的
 * 正則化項 $LDS(x, \theta)$をLossに加算することで滑らかにしている

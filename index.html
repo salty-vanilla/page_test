@@ -2,13 +2,33 @@
 layout: default
 ---
 
-<div class="posts">
+<div id="colorlib-container">
+  <div class="container">
   {% for post in site.posts %}
-    <article class="post">
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      <div class="date">
-        {{ post.date | date: "%Y-%m-%d" }}
+    {% assign mod_idx = forloop.index0 | modulo: 2 %}
+    {% if mod_idx == 0 %}
+      <div class="row row-pb-md">
+    {% endif %}
+    <div class="col-md-6">
+      <div class="blog-entry">
+        <div class="blog-img">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{ site.baseurl }}/images/post/{{ post.thumbnail }}" class="img-responsive" alt="html5 bootstrap template">
+          </a>
+        </div>
+        <div class="desc">
+          <p class="meta">
+            <span class="cat"><a href="#">{{ post.category }}</a></span>
+            <span class="date">{{ post.date | date: "%d %b %Y" }}</span>
+          </p>
+          <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+          <p>{{ post.desc }} </p>
+        </div>
       </div>
-    </article>
+    </div>
+    {% if mod_idx == 1 or forloop.last == true %}
+      </div>
+    {% endif %}
   {% endfor %}
+  </div>
 </div>
