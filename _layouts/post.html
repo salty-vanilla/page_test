@@ -6,8 +6,8 @@ layout: default
 <div class="container">
 	<article class="post">
 		<h1>{{ page.title }}</h1>
-		<div class="date">
-			{{ page.date | date: "%Y年%m月%d日" }}
+		<div class="date" style="text-align: end;">
+			{{ post.date | date: "%d %b %Y" }}
 		</div>
 
 		<div class="container">
