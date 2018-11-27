@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TGANv2: Efficient Training of Large Models for Video Generation with Multiple Subsampling Layers
+title: TGANv2 Efficient Training of Large Models for Video Generation with Multiple Subsampling Layers
 thumbnail: TGANv2 Efficient Training of Large Models for Video Generation with Multiple Subsampling Layers/fig3.png
 ---
 
