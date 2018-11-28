@@ -63,3 +63,4 @@ permalink: /:year/:month/:day/:title/
 version: v1.1.0
 
 future: true
+timezone: Asia/Tokyo
