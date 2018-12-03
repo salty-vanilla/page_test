@@ -4,10 +4,24 @@ title: About me
 permalink: /about/
 ---
 
-## About me
-名前 : 中塚 俊介  
-所属 : 岐阜大学大学院  
-研究 : ニューラルネットワーク, コンピュータビジョン, 人工知能を用いた外観検査の自動化
+<table>
+  <tr>
+    <th class="t_top" width="180">名前</th>
+    <td class="t_top">中塚 俊介</td>
+  </tr>
+  <tr>
+    <th>所属</th>
+    <td>岐阜大学大学院</td>
+  </tr>
+  <tr>
+    <th>研究</th>
+    <td>人工知能を用いた外観検査の自動化</td>
+  </tr>
+  <tr>
+    <th>メールアドレス</th>
+    <td>nakatsuka[at]cv.info.gifu-u.ac.jp</td>
+  </tr>
+</table>
 
 ## 業績
 
