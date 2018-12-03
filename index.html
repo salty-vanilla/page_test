@@ -7,7 +7,7 @@ layout: default
   {% for post in site.posts %}
     {% assign mod_idx = forloop.index0 | modulo: 2 %}
     {% if mod_idx == 0 %}
-      <div class="row row-pb-md">
+      <div class="row row-pb-md  align-items-end">
     {% endif %}
     <div class="col-md-6">
       <div class="blog-entry">
